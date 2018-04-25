@@ -1,11 +1,12 @@
 <!--App.vue是项目入口文件。-->
 <template>
     <div id="app">
-        <h2>{{msg}}</h2>
+        <h2>{{msg}}123</h2>
     </div>
 </template>
 
 <script>
+
 export default {
   name: 'app',
   data () {
@@ -15,4 +16,3 @@ export default {
   }
 }
 </script>
-
