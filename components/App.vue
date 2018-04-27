@@ -1,18 +1,13 @@
 <!--App.vue是项目入口文件。-->
 <template>
-    <div id="app">
-        <h2>{{msg}}123</h2>
-    </div>
+    <portal/>
 </template>
 
 <script>
-
+import portal from './portal/portal.vue'
 export default {
-  name: 'app',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
+    components:{
+        portal
     }
-  }
 }
 </script>

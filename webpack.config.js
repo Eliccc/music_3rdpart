@@ -1,7 +1,13 @@
-var path = require('path')
-var webpack = require('webpack')
+const path = require('path')
+const webpack = require('webpack')
+const { VueLoaderPlugin } = require('vue-loader')
 
 module.exports = {
+    //用来定位到报错地点
+    devtool: 'inline-source-map',
+    // devtool: 'source-map',
+
+    
     entry: './index.js',//值可以是字符串、数组或对象
     output: {
         path: path.resolve(__dirname, './dist'),//Webpack结果存储
@@ -48,5 +54,10 @@ module.exports = {
         alias: {
             'vue$': 'vue/dist/vue.esm.js'
         }
-    }
+    },
+    plugins: [
+        // make sure to include the plugin for the magic
+        //高版本的vue-loader必须的, for magic
+        new VueLoaderPlugin()
+    ]
 }
