@@ -10,15 +10,19 @@
     top: 50px;
     bottom: 50px;
 
-
     &::-webkit-scrollbar {
         width: 8px;
+
     }
 
     &::-webkit-scrollbar-thumb {
         border-radius: 4px;
         background-color: #e1e1e2;
+        &:hover{
+            background-color:#d3d3d3;
+        }
     }
+    
 
     ul{
         font-size:13px;

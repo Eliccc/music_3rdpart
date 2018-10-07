@@ -1,5 +1,7 @@
 import Vue from 'vue'
 
+import router from './src/router/router.js'
+
 //播放进度控件
 import MuseUI from 'muse-ui';
 import 'muse-ui/dist/muse-ui.css';
@@ -20,5 +22,7 @@ Vue.use(VueAwesomeSwiper, /* { default global options } */)
 new Vue({
   el: '#app',
   store,
+  router,
   render: h => h(App)
 })
+
